@@ -1,3 +1,8 @@
+/* 
+Code by: http://jonathannicol.com/projects/parallax-scrolling/ ; http://callmenick.com/post/simple-parallax-scrolling-effect.
+Modified by: Kelly Horigan
+*/
+
 $(document).ready(function() {
 	
 	redrawDotNav();
@@ -66,9 +71,9 @@ $(document).ready(function() {
 function redrawDotNav(){
 	var section1Top =  0;
 	// The top of each section is offset by half the distance to the previous section.
-	var section2Top =  $('#module content').offset().top - (($('#module parallax parallax-2').offset().top - $('#module content').offset().top) / 2);
-	var section3Top =  $('#module parallax parallax-2').offset().top - (($('#module parallax parallax-3').offset().top - $('#module parallax parallax-2').offset().top) / 2);
-	var section4Top =  $('#module parallax parallax-3').offset().top - (($(document).height() - $('#module parallax parallax-3').offset().top) / 2);;
+	var section2Top =  $('.module content').offset().top - (($('.module parallax parallax-2').offset().top - $('.module content').offset().top) / 2);
+	var section3Top =  $('.module parallax parallax-2').offset().top - (($('.module parallax parallax-3').offset().top - $('.module parallax parallax-2').offset().top) / 2);
+	var section4Top =  $('.module parallax parallax-3').offset().top - (($(document).height() - $('.module parallax parallax-3').offset().top) / 2);;
 	$('nav#primary a').removeClass('active');
 	if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
 		$('nav#primary a.module parallax parallax-1').addClass('active');
